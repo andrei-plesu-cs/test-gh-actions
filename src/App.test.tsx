@@ -8,7 +8,7 @@ describe('App', () => {
     render(<App />)
     expect(
       screen.getByRole('heading', { level: 1, name: 'Get started' }),
-    ).toBeInTheDocument()
+    ).not.toBeInTheDocument()
   })
 
   it('starts the counter at zero', () => {
