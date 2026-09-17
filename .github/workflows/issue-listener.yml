@@ -1,0 +1,11 @@
+name: Issue Listener
+
+on:
+  issues:
+    types: [opened]
+jobs:
+  print-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print issue information
+        run: echo "${{ github.event }}"
