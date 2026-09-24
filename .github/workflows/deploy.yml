@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-    paths-ignore:
-      - ".github/workflows/*"
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -43,5 +41,9 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Do something
-        run: echo "I am doing something"
+      - name: Download release
+        uses: actions/download-artifact@v7
+        with:
+          name: dist-files
+      - name: Check files
+        run: ls
