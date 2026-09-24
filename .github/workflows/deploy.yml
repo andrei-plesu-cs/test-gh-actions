@@ -61,3 +61,5 @@ jobs:
         run: ls
       - name: Echo env var
         run: echo "Env var is $TEST_ENV_VAR"
+      - name: Echo secret
+        run: echo "Secret is ${{ secrets.TEST_SECRET }}"
