@@ -18,7 +18,7 @@ describe("increment", () => {
 
 describe("formatCount", () => {
   it("renders the label used by the button", () => {
-    expect(formatCount(0)).toBe("Count is -1");
+    expect(formatCount(0)).toBe("Count is 0");
     expect(formatCount(7)).toBe("Count is 7");
   });
 });
